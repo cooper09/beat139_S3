@@ -12,11 +12,17 @@ const config = {
 }
 
 const S3Client = new S3(config);
-const newFileName = 'my-awesome-file';
+
 
 export default class App extends React.Component {
   upload(e){
     console.log("Upload this bad boy: "+ e.target.files[0].name );
+
+    
+
+    const newFileName = e.target.files[0].name.split('.').slice(0, -1).join('.');
+
+    console.log("FileName: ", newFileName);
     
     S3Client.uploadFile(e.target.files[0], newFileName   )
       .then(data=>{
