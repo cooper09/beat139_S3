@@ -27,7 +27,7 @@ export default class App extends React.Component {
     S3Client.uploadFile(e.target.files[0], newFileName   )
       .then(data=>{
         alert("File has been successfully uploaded.")
-        console.log("S3 data: "+ data );
+        console.log("S3 location: "+ data.location+" bucket: "+ data.bucket +" status: "+ data.status);
       })
       .catch( err =>{
         console.log("Error: " + err )
