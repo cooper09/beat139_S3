@@ -6,8 +6,7 @@ const config = {
   bucketName: 'testviddy',
   //dirName: 'photos', /* optional */
   region: 'us-east-1',
-   accessKeyId: 'AKIA2DTP7BZY52DEG3DJ',
-  secretAccessKey: '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',
+  
   s3Url: 'https://s3.amazonaws.com/testviddy/', /* optional */
 }
 
